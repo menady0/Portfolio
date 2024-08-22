@@ -122,6 +122,12 @@ hr {
     border-bottom-left-radius: 6px;
   }
 }
+@media screen and (max-width: 576px) {
+  .left-card, 
+  .right-card {
+    width: 80%;
+  }
+}
 .row .right-card {
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
@@ -154,6 +160,11 @@ hr {
   border-radius: 10px;
   margin-left: 10px;
   margin-right: 10px;
+}
+@media screen and (max-width: 576px) {
+  .my-work {
+    width: 80%;
+  }
 }
 .my-work div {
   position: absolute;
