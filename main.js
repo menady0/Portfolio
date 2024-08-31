@@ -36,34 +36,40 @@ toggle.addEventListener('click', function(){
 })
 
 
-
 // Testimonial Slider
 var btn = document.getElementsByClassName('cir');
 var slide = document.getElementById('slide');
-for(let i = 0; i < btn.length; i++){
-  btn[i].addEventListener('click', function(){
-    if(i == 0)
-      slide.style.transform = 'translateX(0px)'
-    else 
-      slide.style.transform = 'translateX(-500px)'
-    for(let j = 0; j < 2; j++){
-      btn[j].classList.remove('active');
-    }
-    this.classList.add('active')
-  })
+let translate = 50
+let width = window.innerWidth;
+// for(let i = 0; i < btn.length; i++){
+//   btn[i].addEventListener('click', function(){
+//     if(i == 0)
+//       if()
+//       slide.style.transform = 'translateX(0px)'
+//     else 
+//       slide.style.transform = `translateX(-${translate}vw)`
+//     for(let j = 0; j < 2; j++){
+//       btn[j].classList.remove('active');
+//     }
+//     this.classList.add('active')
+//   })
+// }
+btn[0].onclick = function(){
+  slide.style.transform = 'translateX(0px)'
+  for(i = 0; i < 2; i++){
+    btn[i].classList.remove('active');
+  }
+  this.classList.add('active')
 }
-// btn[0].onclick = function(){
-//   slide.style.transform = 'translateX(0px)'
-//   for(i = 0; i < 2; i++){
-//     btn[i].classList.remove('active');
-//   }
-//   this.classList.add('active')
-// }
-// btn[1].onclick = function(){
-//   slide.style.transform = 'translateX(-500px)'
-//   for(i = 0; i < 2; i++){
-//     btn[i].classList.remove('active');
-//   }
-//   this.classList.add('active')
-// }
+btn[1].onclick = function(){
+  if(width > 576)
+    translate = 50;
+  else 
+    translate = 80
+  slide.style.transform = `translateX(-${translate}vw)`
+  for(i = 0; i < 2; i++){
+    btn[i].classList.remove('active');
+  }
+  this.classList.add('active')
+}
 
