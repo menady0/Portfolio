@@ -6,7 +6,6 @@ const rightCard = document.getElementsByClassName('right-card');
 
 toggle.addEventListener('click', function(){
   this.classList.toggle('bi-moon-fill');
-  // leftCard[0].innerHTML = "hi"
   if(this.classList.toggle('bi-brightness-high-fill')){
     body.style.backgroundColor = 'white';
     body.style.color = 'black'
@@ -37,22 +36,34 @@ toggle.addEventListener('click', function(){
 })
 
 
-// Testimonial Slider
-var btn = document.getElementsByClassName('i-btn');
-var slide = document.getElementById('slide');
 
-btn[0].onclick = function(){
-  slide.style.transform = 'translateX(0px)'
-  for(i = 0; i < 2; i++){
-    btn[i].classList.remove('active');
-  }
-  this.classList.add('active')
+// Testimonial Slider
+var btn = document.getElementsByClassName('cir');
+var slide = document.getElementById('slide');
+for(let i = 0; i < btn.length; i++){
+  btn[i].addEventListener('click', function(){
+    if(i == 0)
+      slide.style.transform = 'translateX(0px)'
+    else 
+      slide.style.transform = 'translateX(-500px)'
+    for(let j = 0; j < 2; j++){
+      btn[j].classList.remove('active');
+    }
+    this.classList.add('active')
+  })
 }
-btn[1].onclick = function(){
-  slide.style.transform = 'translateX(-400px)'
-  for(i = 0; i < 2; i++){
-    btn[i].classList.remove('active');
-  }
-  this.classList.add('active')
-}
+// btn[0].onclick = function(){
+//   slide.style.transform = 'translateX(0px)'
+//   for(i = 0; i < 2; i++){
+//     btn[i].classList.remove('active');
+//   }
+//   this.classList.add('active')
+// }
+// btn[1].onclick = function(){
+//   slide.style.transform = 'translateX(-500px)'
+//   for(i = 0; i < 2; i++){
+//     btn[i].classList.remove('active');
+//   }
+//   this.classList.add('active')
+// }
 

@@ -211,6 +211,68 @@ hr {
   border-color: #0a0618;
 }
 
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.hero .testimo {
+  height:fit-content;
+}
+.containerForTest{
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.indicators {
+  position: absolute;
+  bottom: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.indicators span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #E6ECF8;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 5px;
+}
+.indicators .active {
+  background-color: var(--main-color);
+  border: none;
+}
+
+.testimonial {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin-top: 50px;
+}
+.slide-row {
+  width: 1000px;
+  display: flex;
+  transition: .5s;
+}
+.slide-col {
+  width: 500px;
+  height: 400px;
+  padding: 25px;
+}
+.slide-col img {
+  width: 120px;
+  margin: 50px 0 60px;
+}
+
+.slide-col .people {
+  margin-top: 60px;
+}
+/* 
 .person img {
   width: 100px;
   margin-bottom: 50px;
@@ -262,11 +324,11 @@ hr {
   width: 100%;
   height: 100%;
   overflow: hidden;
-}
+} */
 footer {
   background-color: var(--main-color);
   padding: 100px 100px 25px;
-  margin-top: 100px;
+  /* margin-top: 100px; */
   color: white;
 }
 @media screen and (max-width: 600px) {
